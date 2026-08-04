@@ -113,7 +113,7 @@ class Alerts
      *
      * @return \Cartalyst\Alerts\Notifiers\NotifierInterface|null
      */
-    public function notifier(string $name, string $default = null): ?NotifierInterface
+    public function notifier(string $name, ?string $default = null): ?NotifierInterface
     {
         return $this->notifiers[$name] ?? $default;
     }
