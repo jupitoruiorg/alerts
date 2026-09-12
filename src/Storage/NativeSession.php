@@ -35,7 +35,7 @@ class NativeSession extends IlluminateSession implements StorageInterface
      *
      * @return void
      */
-    public function __construct(SessionStore $session, string $instance = null, string $key = null, array $config = [])
+    public function __construct(SessionStore $session, ?string $instance = null, ?string $key = null, array $config = [])
     {
         parent::__construct($session, $instance, $key);
 

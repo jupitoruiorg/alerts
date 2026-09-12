@@ -46,7 +46,7 @@ class Alert
      *
      * @return void
      */
-    public function __construct(AlertsBootstrapper $bootstrapper = null)
+    public function __construct(?AlertsBootstrapper $bootstrapper = null)
     {
         if ($bootstrapper === null) {
             $bootstrapper = new AlertsBootstrapper();
@@ -72,7 +72,7 @@ class Alert
      *
      * @return \Cartalyst\Alerts\Native\Facades\Alert
      */
-    public static function instance(AlertsBootstrapper $bootstrapper = null)
+    public static function instance(?AlertsBootstrapper $bootstrapper = null)
     {
         if (static::$instance === null) {
             static::$instance = new static($bootstrapper);
